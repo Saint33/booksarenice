@@ -5,6 +5,7 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
+import BookCover from '../components/bookCover';
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -17,3 +18,6 @@ storiesOf('Button', module)
       </span>
     </Button>
   ));
+
+  storiesOf('BookCover', module)
+    .add('test', () => <BookCover image="https://senselesscrutiny.files.wordpress.com/2015/07/a-thousand-nights1.jpg" title="A thousand nights"/>)
