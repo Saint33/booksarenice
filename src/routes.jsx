@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import { Switch, Route } from 'react-router-dom';
 
@@ -6,7 +7,9 @@ import Main from './views/main';
 
 const Routes = () => (
   <Layout>
-    <Route path="/" component={Main} />
+    <Switch>
+      <Route path="/" component={Main} />
+    </Switch>
   </Layout>
 )
 
