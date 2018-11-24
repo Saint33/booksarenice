@@ -4,11 +4,15 @@ import { Switch, Route } from 'react-router-dom';
 
 import Layout from './layout';
 import Main from './views/main';
+import BookPage from './views/bookPage';
+import Vis from './views/library';
 
 const Routes = () => (
   <Layout>
     <Switch>
-      <Route path="/" component={Main} />
+      <Route path="/" exact component={Main} />
+      <Route path="/book/:id" component={BookPage} />
+      <Route path="/library" component={Vis} />
     </Switch>
   </Layout>
 )
